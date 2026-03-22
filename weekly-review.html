@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=393px, initial-scale=1" />
+  <title>Mellow — Weekly Review</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-screen">
+
+  <!-- Status bar -->
+  <div class="status-bar">
+    <span class="status-bar__time">9:41</span>
+    <div class="status-bar__icons">
+      <svg width="17" height="11" viewBox="0 0 17 11" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0"   y="6" width="3" height="5" rx="0.8"/>
+        <rect x="4.5" y="4" width="3" height="7" rx="0.8"/>
+        <rect x="9"   y="2" width="3" height="9" rx="0.8"/>
+        <rect x="13.5" y="0" width="3" height="11" rx="0.8"/>
+      </svg>
+      <svg width="16" height="11" viewBox="0 0 16 11" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 7.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+        <path d="M4.2 5.3a5.3 5.3 0 0 1 7.6 0L13.2 3.9a7.5 7.5 0 0 0-10.4 0L4.2 5.3Z"/>
+        <path d="M1.5 2.6a9.3 9.3 0 0 1 13 0L16 1.2A11.3 11.3 0 0 0 0 1.2L1.5 2.6Z"/>
+      </svg>
+      <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="white" stroke-opacity="0.35"/>
+        <rect x="2" y="2" width="17" height="8" rx="2" fill="white"/>
+        <path d="M23 4v4a2 2 0 0 0 0-4Z" fill="white" fill-opacity="0.4"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Header: back button + progress bar -->
+  <div class="review-header">
+    <button class="review-back" onclick="window.location.href='today.html'" aria-label="Back">
+      <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 1L1 9l8 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="review-progress">
+      <div class="review-progress-fill" id="progressFill"></div>
+    </div>
+  </div>
+
+  <!-- Slides -->
+  <div class="review-content">
+
+    <!-- 1. Overview -->
+    <div class="review-slide active">
+      <span class="text-3xs-book review-label">Overview</span>
+      <p class="text-m-medium" style="color: var(--color-slate-0);">Your baby had a good week overall. Sleep totals were within the recommended range for their age, and you managed a consistent bedtime on 6 out of 7 nights.</p>
+    </div>
+
+    <!-- 2. Night sleep -->
+    <div class="review-slide">
+      <span class="text-3xs-book review-label">Night sleep</span>
+      <p class="text-m-medium" style="color: var(--color-slate-0);">Night sleep duration is holding. Try the drowsy-but-awake technique and practise it at every bedtime this week to build the habit.</p>
+      <button class="learn-more-btn"
+        data-term="Drowsy-but-awake"
+        data-body="Drowsy-but-awake is a settling technique. It means putting your baby down in their sleep space when they are sleepy but still conscious — not fully asleep in your arms. The idea is that if a baby falls asleep independently in their crib, they are more likely to be able to resettle themselves when they wake between sleep cycles during the night."
+        data-source="American Academy of Pediatrics">
+        <div class="learn-more-btn__text">
+          <span class="text-4xs-book learn-more-btn__label">Learn more about:</span>
+          <span class="text-2xs-medium" style="color: var(--color-slate-0);">Drowsy-but-awake</span>
+        </div>
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 3. Naps -->
+    <div class="review-slide">
+      <span class="text-3xs-book review-label">Naps</span>
+      <p class="text-m-medium" style="color: var(--color-slate-0);">All naps capped at one sleep cycle this week — a hallmark of the four-month regression. Try drowsy-but-awake at nap time too, not just at night. Consistency across all sleeps speeds progress.</p>
+      <button class="learn-more-btn"
+        data-term="Four-month regression"
+        data-body="The four-month sleep regression is a permanent change in your baby's sleep architecture. Around this age, babies transition from two sleep stages to four — similar to adults. This makes it harder for them to connect sleep cycles, causing more frequent night wakings and shorter naps. Unlike later regressions, this one doesn't fully resolve on its own without some adjustments to sleep habits."
+        data-source="Sleep Foundation">
+        <div class="learn-more-btn__text">
+          <span class="text-4xs-book learn-more-btn__label">Learn more about:</span>
+          <span class="text-2xs-medium" style="color: var(--color-slate-0);">Four-month regression</span>
+        </div>
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 4. Events -->
+    <div class="review-slide">
+      <span class="text-3xs-book review-label">Events</span>
+      <p class="text-m-medium" style="color: var(--color-slate-0);">The most logged event this week was early morning waking. This is common during growth spurts and developmental leaps. Try extending the last wake window by 15–20 minutes.</p>
+      <button class="learn-more-btn"
+        data-term="Wake window"
+        data-body="A wake window is the amount of time a baby can comfortably stay awake between sleep periods before becoming overtired. Wake windows vary by age and grow longer as babies develop. Keeping to age-appropriate wake windows helps babies fall asleep more easily and sleep for longer stretches."
+        data-source="Pediatric Sleep Council">
+        <div class="learn-more-btn__text">
+          <span class="text-4xs-book learn-more-btn__label">Learn more about:</span>
+          <span class="text-2xs-medium" style="color: var(--color-slate-0);">Wake window</span>
+        </div>
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- 5. Tip -->
+    <div class="review-slide">
+      <span class="text-3xs-book review-label">Tip for next week</span>
+      <p class="text-m-medium" style="color: var(--color-slate-0);">Focus on one change at a time. If you're working on drowsy-but-awake at bedtime, keep it consistent for at least 5–7 days before introducing nap practice. Small steps lead to lasting sleep.</p>
+      <button class="learn-more-btn"
+        data-term="Drowsy-but-awake"
+        data-body="Drowsy-but-awake is a settling technique. It means putting your baby down in their sleep space when they are sleepy but still conscious — not fully asleep in your arms. The idea is that if a baby falls asleep independently in their crib, they are more likely to be able to resettle themselves when they wake between sleep cycles during the night."
+        data-source="American Academy of Pediatrics">
+        <div class="learn-more-btn__text">
+          <span class="text-4xs-book learn-more-btn__label">Learn more about:</span>
+          <span class="text-2xs-medium" style="color: var(--color-slate-0);">Drowsy-but-awake</span>
+        </div>
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="review-footer">
+    <button class="btn-raised text-2xs-medium review-continue" id="continueBtn">Continue</button>
+  </div>
+
+  <!-- Modal overlay -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <!-- Modal sheet -->
+  <div class="modal-sheet" id="modalSheet">
+    <div class="modal-handle"></div>
+    <p class="text-m-bold modal-title" id="modalTitle"></p>
+    <p class="text-2xs-book modal-body" id="modalBody"></p>
+    <button class="modal-source text-4xs-book" id="modalSource">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.5 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V9.5M9 2h5m0 0v5m0-5L7 9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="modalSourceText"></span>
+    </button>
+  </div>
+
+</div>
+<script>
+  const slides = document.querySelectorAll('.review-slide');
+  const progressFill = document.getElementById('progressFill');
+  const continueBtn = document.getElementById('continueBtn');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalSheet = document.getElementById('modalSheet');
+  let current = 0;
+
+  function update() {
+    progressFill.style.width = ((current + 1) / slides.length * 100) + '%';
+    continueBtn.textContent = current === slides.length - 1 ? 'Done' : 'Continue';
+  }
+
+  continueBtn.addEventListener('click', () => {
+    if (current < slides.length - 1) {
+      slides[current].classList.remove('active');
+      current++;
+      slides[current].classList.add('active');
+    } else {
+      window.location.href = 'today.html';
+    }
+    update();
+  });
+
+  // Learn more buttons
+  document.querySelectorAll('.learn-more-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('modalTitle').textContent = btn.dataset.term;
+      document.getElementById('modalBody').textContent = btn.dataset.body;
+      document.getElementById('modalSourceText').textContent = 'source: ' + btn.dataset.source;
+      modalOverlay.classList.add('active');
+      modalSheet.classList.add('active');
+    });
+  });
+
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    modalSheet.classList.remove('active');
+  }
+
+  modalOverlay.addEventListener('click', closeModal);
+
+  update();
+</script>
+</body>
+</html>

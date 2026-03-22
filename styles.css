@@ -1,0 +1,777 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /*  Primary */                           
+    --color-primary-300: #7F8CEF;                                               
+    --color-primary-500: #5A6CFA;
+                                                                                
+  /* Slate scale */                           
+    --color-slate-0:    #FFFFFF;                                                
+    --color-slate-50:   #F6F6F8;                                                
+    --color-slate-100:  #BDC1C7;                                                
+    --color-slate-200:  #949EAA;                                                
+    --color-slate-300:  #77818F;                                                
+    --color-slate-400:  #5D6678;                                                
+    --color-slate-500:  #4E576A;                                                
+    --color-slate-600:  #3F485A;
+    --color-slate-700:  #2F3645;                                                
+    --color-slate-800:  #222938;
+    --color-slate-900:  #141924;                                                
+    --color-slate-950:  #0A0D12;                                                
+    --color-slate-1000: #000000;   
+
+  /* Font weights */                                                          
+    --font-weight-book:   400;
+    --font-weight-medium: 500;
+    --font-weight-bold:   700;                                                  
+   
+    /* Size scale */                                                            
+    --text-5xl-size:    96px;
+    --text-5xl-leading: 100px;
+    --text-5xl-tracking: -0.02em;                                               
+   
+    --text-4xl-size:    72px;                                                   
+    --text-4xl-leading: 92px;
+    --text-4xl-tracking: -0.02em;                                               
+                                                                                
+    --text-3xl-size:    52px;                                                   
+    --text-3xl-leading: 72px;                                                   
+    --text-3xl-tracking: -0.02em;                                               
+                                                                                
+    --text-2xl-size:    48px;
+    --text-2xl-leading: 64px;                                                   
+    --text-2xl-tracking: -0.02em;                                               
+   
+    --text-xl-size:    32px;                                                    
+    --text-xl-leading: 40px;
+    --text-xl-tracking: -0.018em;                                               
+                  
+    --text-l-size:    28px;                                                     
+    --text-l-leading: 36px;
+    --text-l-tracking: -0.018em;                                                
+   
+    --text-m-size:    24px;                                                     
+    --text-m-leading: 32px;
+    --text-m-tracking: -0.016em;
+                                                                                
+    --text-s-size:    20px;                                                     
+    --text-s-leading: 28px;                                                     
+    --text-s-tracking: -0.014em;                                                
+                  
+    --text-xs-size:    18px;                                                    
+    --text-xs-leading: 26px;
+    --text-xs-tracking: -0.012em;                                               
+                                                                                
+    --text-2xs-size:    16px;
+    --text-2xs-leading: 22px;                                                   
+    --text-2xs-tracking: -0.01em;                                               
+   
+    --text-3xs-size:    14px;                                                   
+    --text-3xs-leading: 20px;
+    --text-3xs-tracking: -0.01em;
+                                                                                
+    --text-4xs-size:    12px;
+    --text-4xs-leading: 16px;                                                   
+    --text-4xs-tracking: -0.01em; 
+}
+
+/* Font faces */
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-LightItal.otf);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-Book.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-BookItal.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-MedItal.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-Bold.otf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GothamRnd;
+  src: url(fonts/GothamRnd-BoldItal.otf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-slate-950);
+  display: flex;
+  justify-content: center;
+  font-family: GothamRnd, sans-serif;
+}
+
+.btn-raised {
+  background: var(--color-primary-500);
+  color: var(--color-slate-0);
+  border-radius: 12px;
+  padding: 9px 12px 8px;
+  font-size: var(--text-3xs-size);
+  letter-spacing: var(--text-3xs-tracking);
+  border: none;
+  cursor: pointer;
+  box-shadow:
+    0px 4px 0px 0px #4254de,
+    0px 9px 0px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 3px 0px 0px rgba(255, 255, 255, 0.08);
+  transform: translateY(0);
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}                                                                             
+                
+.btn-raised:active {                                                          
+  transform: translateY(4px);
+  box-shadow:
+    0px 4px 0px 0px rgba(0, 0, 0, 0.25),
+    inset 0px 3px 0px 0px rgba(255, 255, 255, 0.08);
+}  
+
+/* Text styles */
+  /* 5XL — 96px */                                                              
+  .text-5xl-bold {                                                              
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-5xl-size);                                            
+    line-height: var(--text-5xl-leading);
+    letter-spacing: var(--text-5xl-tracking);                                   
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;                                                         
+  }                                                                             
+  .text-5xl-medium {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-5xl-size);                                            
+    line-height: var(--text-5xl-leading);                                       
+    letter-spacing: var(--text-5xl-tracking);                                   
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;
+  }                                                                             
+                  
+  /* 4XL — 72px */                                                              
+  .text-4xl-bold {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-4xl-size);
+    line-height: var(--text-4xl-leading);                                       
+    letter-spacing: var(--text-4xl-tracking);                                   
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;                                                         
+  }                                                                             
+  .text-4xl-medium {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-4xl-size);                                            
+    line-height: var(--text-4xl-leading);
+    letter-spacing: var(--text-4xl-tracking);                                   
+    font-weight: var(--font-weight-medium);
+    font-style: normal;                                                         
+  }
+                                                                                
+  /* 3XL — 52px */
+  .text-3xl-bold {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-3xl-size);                                            
+    line-height: var(--text-3xl-leading);
+    letter-spacing: var(--text-3xl-tracking);                                   
+    font-weight: var(--font-weight-bold);
+    font-style: normal;                                                         
+  }
+  .text-3xl-medium {                                                            
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-3xl-size);
+    line-height: var(--text-3xl-leading);                                       
+    letter-spacing: var(--text-3xl-tracking);                                   
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;                                                         
+  }               
+                                                                                
+  /* 2XL — 48px */
+  .text-2xl-bold {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-2xl-size);                                            
+    line-height: var(--text-2xl-leading);                                       
+    letter-spacing: var(--text-2xl-tracking);                                   
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;                                                         
+  }                                                                             
+  .text-2xl-medium {                                                            
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-2xl-size);                                            
+    line-height: var(--text-2xl-leading);                                       
+    letter-spacing: var(--text-2xl-tracking);                                   
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;                                                         
+  }                                                                             
+                                                                                
+  /* XL — 32px */                                                               
+  .text-xl-bold {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-xl-size);
+    line-height: var(--text-xl-leading);
+    letter-spacing: var(--text-xl-tracking);                                    
+    font-weight: var(--font-weight-bold);
+    font-style: normal;                                                         
+  }               
+  .text-xl-medium {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-xl-size);                                             
+    line-height: var(--text-xl-leading);
+    letter-spacing: var(--text-xl-tracking);                                    
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;
+  }                                                                             
+                  
+  /* L — 28px */
+  .text-l-bold {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-l-size);                                              
+    line-height: var(--text-l-leading);
+    letter-spacing: var(--text-l-tracking);                                     
+    font-weight: var(--font-weight-bold);
+    font-style: normal;                                                         
+  }
+  .text-l-medium {                                                              
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-l-size);
+    line-height: var(--text-l-leading);                                         
+    letter-spacing: var(--text-l-tracking);
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;
+  }                                                                             
+   
+  /* M — 24px */                                                                
+  .text-m-bold {  
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-m-size);
+    line-height: var(--text-m-leading);                                         
+    letter-spacing: var(--text-m-tracking);
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;
+  }
+  .text-m-medium {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-m-size);
+    line-height: var(--text-m-leading);                                         
+    letter-spacing: var(--text-m-tracking);
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;                                                         
+  }                                                                             
+                                                                                
+  /* S — 20px */  
+  .text-s-bold {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-s-size);                                              
+    line-height: var(--text-s-leading);                                         
+    letter-spacing: var(--text-s-tracking);                                     
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;                                                         
+  }                                                                             
+  .text-s-medium {                                                              
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-s-size);                                              
+    line-height: var(--text-s-leading);
+    letter-spacing: var(--text-s-tracking);                                     
+    font-weight: var(--font-weight-medium);
+    font-style: normal;                                                         
+  }
+                                                                                
+  /* XS — 18px */ 
+  .text-xs-bold {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-leading);                                        
+    letter-spacing: var(--text-xs-tracking);
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;
+  }                                                                             
+  .text-xs-medium {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-leading);
+    letter-spacing: var(--text-xs-tracking);                                    
+    font-weight: var(--font-weight-medium);
+    font-style: normal;                                                         
+  }               
+  .text-xs-book {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-xs-size);
+    line-height: var(--text-xs-leading);                                        
+    letter-spacing: var(--text-xs-tracking);                                    
+    font-weight: var(--font-weight-book);
+    font-style: normal;                                                         
+  }               
+
+  /* 2XS — 16px */                                                              
+  .text-2xs-bold {
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-2xs-size);                                            
+    line-height: var(--text-2xs-leading);                                       
+    letter-spacing: var(--text-2xs-tracking);                                   
+    font-weight: var(--font-weight-bold);                                       
+    font-style: normal;                                                         
+  }                                                                             
+  .text-2xs-medium {                                                            
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-2xs-size);                                            
+    line-height: var(--text-2xs-leading);                                       
+    letter-spacing: var(--text-2xs-tracking);                                   
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;                                                         
+  }                                                                             
+  .text-2xs-book {                                                              
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-2xs-size);
+    line-height: var(--text-2xs-leading);                                       
+    letter-spacing: var(--text-2xs-tracking);
+    font-weight: var(--font-weight-book);                                       
+    font-style: normal;                                                         
+  }                                                                             
+                                                                                
+  /* 3XS — 14px */                                                              
+  .text-3xs-medium {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-3xs-size);
+    line-height: var(--text-3xs-leading);                                       
+    letter-spacing: var(--text-3xs-tracking);
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;                                                         
+  }                                                                             
+  .text-3xs-book {                                                              
+    font-family: GothamRnd, sans-serif;                                  
+    font-size: var(--text-3xs-size);
+    line-height: var(--text-3xs-leading);                                       
+    letter-spacing: var(--text-3xs-tracking);
+    font-weight: var(--font-weight-book);                                       
+    font-style: normal;
+  }                                                                             
+   
+  /* 4XS — 12px */                                                              
+  .text-4xs-medium {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-4xs-size);
+    line-height: var(--text-4xs-leading);                                       
+    letter-spacing: var(--text-4xs-tracking);                                   
+    font-weight: var(--font-weight-medium);                                     
+    font-style: normal;                                                         
+  }                                                                             
+  .text-4xs-book {
+    font-family: GothamRnd, sans-serif;
+    font-size: var(--text-4xs-size);
+    line-height: var(--text-4xs-leading);
+    letter-spacing: var(--text-4xs-tracking);
+    font-weight: var(--font-weight-book);
+    font-style: normal;
+  }
+
+/* ── App Shell ─────────────────────────────────────── */
+.app-screen {
+  position: relative;
+  width: 393px;
+  min-height: 100svh;
+  background: var(--color-slate-900);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Status bar ─────────────────────────────────────── */
+.status-bar {
+  height: 44px;
+  padding: 14px 21px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+  color: var(--color-slate-0);
+}
+.status-bar__time {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.status-bar__icons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* ── Scrollable content ─────────────────────────────── */
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 3px 24px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Lesson suggestion card ─────────────────────────── */
+.lesson-card {
+  background: var(--color-slate-800);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 324px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 17px 16px;
+}
+.lesson-card__img {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 195px;
+  width: 100%;
+  object-fit: cover;
+}
+.lesson-card__fade {
+  position: absolute;
+  left: 0; right: 0;
+  top: 79px;
+  height: 135px;
+  background: linear-gradient(to top, var(--color-slate-800) 27%, rgba(34, 41, 56, 0) 100%);
+}
+.lesson-card__body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  text-align: center;
+}
+.lesson-card__labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-slate-0);
+}
+.lesson-card__sublabel {
+  opacity: 0.6;
+}
+
+/* ── Weekly reflection card ─────────────────────────── */
+.reflection-card {
+  border-radius: 16px;
+  height: 206px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(-20deg, #0c1429 2.6%, #324267 36%, var(--color-primary-500) 70%, #fb98b7 101%);
+  box-shadow: 8px 12px 9px 0 rgba(0, 0, 0, 0.15);
+}
+.reflection-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(20, 25, 36, 0.8) 0%, rgba(20, 25, 36, 0) 100%);
+}
+.reflection-card__text {
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 309px;
+  text-align: center;
+}
+.reflection-card__close {
+  position: absolute;
+  top: 12px; right: 18px;
+  width: 24px; height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.reflection-card__close img {
+  width: 100%; height: 100%;
+}
+.reflection-card__action {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 141px;
+}
+
+/* ── Next sleep card ────────────────────────────────── */
+.next-sleep-card {
+  background: var(--color-slate-800);
+  border-radius: 12px;
+  padding: 17px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── Sleep score section ────────────────────────────── */
+.sleep-score-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.score-card {
+  background: var(--color-slate-800);
+  border-radius: 12px;
+  padding: 21px 16px 17px;
+  position: relative;
+}
+.score-card__percent {
+  position: absolute;
+  bottom: 17px; right: 16px;
+}
+.stat-row {
+  background: var(--color-slate-800);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-slate-0);
+  min-height: 52px;
+}
+.stat-row__label {
+  width: 139px;
+}
+.stat-row__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stat-row__sub {
+  opacity: 0.4;
+  line-height: 1.4;
+}
+
+/* ── Tab bar ────────────────────────────────────────── */
+.tab-bar {
+  background: var(--color-slate-900);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: fixed;
+  bottom: 0;
+  width: 393px;
+}
+.tab-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px 8px;
+}
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 56px;
+}
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(1) brightness(1.8);
+  opacity: 0.55;
+}
+.tab-item--active .tab-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(91%) saturate(601%) hue-rotate(213deg) brightness(110%);
+  opacity: 1;
+}
+.tab-label {
+  font-size: var(--text-4xs-size);
+  text-align: center;
+  color: var(--color-slate-200);
+}
+.tab-item--active .tab-label {
+  color: var(--color-primary-500);
+}
+.tab-bar-pill-wrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 9px;
+}
+.tab-bar-pill {
+  width: 134px;
+  height: 5px;
+  background: var(--color-slate-0);
+  border-radius: 100px;
+}
+
+/* ── Weekly Review ──────────────────────────────────── */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  flex-shrink: 0;
+}
+.review-back {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-slate-0);
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.review-progress {
+  flex: 1;
+  height: 4px;
+  background: var(--color-slate-700);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.review-progress-fill {
+  height: 100%;
+  background: var(--color-primary-500);
+  border-radius: 100px;
+  transition: width 0.35s ease;
+}
+.review-content {
+  flex: 1;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.review-slide {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+.review-slide.active {
+  display: flex;
+}
+.review-label {
+  color: var(--color-slate-300);
+}
+.review-footer {
+  padding: 24px;
+  flex-shrink: 0;
+}
+.review-continue {
+  width: 100%;
+}
+
+/* ── Learn more button ──────────────────────────────── */
+.learn-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: 1px solid var(--color-slate-700);
+  border-radius: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  width: 100%;
+  color: var(--color-slate-300);
+}
+.learn-more-btn__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+}
+.learn-more-btn__label {
+  color: var(--color-slate-300);
+}
+
+/* ── Modal overlay ──────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Modal sheet ────────────────────────────────────── */
+.modal-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  width: 393px;
+  background: var(--color-slate-800);
+  border-radius: 24px 24px 0 0;
+  padding: 12px 24px 48px;
+  z-index: 201;
+  transition: transform 0.35s ease;
+}
+.modal-sheet.active {
+  transform: translateX(-50%) translateY(0);
+}
+.modal-handle {
+  width: 40px;
+  height: 4px;
+  background: var(--color-slate-600);
+  border-radius: 100px;
+  margin: 0 auto 28px;
+}
+.modal-title {
+  color: var(--color-slate-0);
+  margin-bottom: 16px;
+}
+.modal-body {
+  color: var(--color-slate-200);
+  line-height: var(--text-2xs-leading);
+}
+.modal-source {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 32px;
+  color: var(--color-slate-300);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}

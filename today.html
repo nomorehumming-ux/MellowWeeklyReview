@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=393px, initial-scale=1" />
+  <title>Mellow — Today</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-screen">
+
+
+  <!-- Scrollable content -->
+  <div class="app-content">
+
+    <!-- Page title -->
+    <h1 class="text-m-medium" style="color: var(--color-slate-0); margin-top: 16px;">Today</h1>
+
+    <!-- Lesson suggestion card -->
+    <div class="lesson-card">
+      <img class="lesson-card__img"
+           src="https://www.figma.com/api/mcp/asset/3b9f7e68-2928-466e-bac6-827974e2e97a"
+           alt="Lesson cover" />
+      <div class="lesson-card__fade"></div>
+      <div class="lesson-card__body">
+        <div class="lesson-card__labels">
+          <span class="text-3xs-book lesson-card__sublabel">Next lesson:</span>
+          <span class="text-m-medium">How to feed your baby?</span>
+        </div>
+        <button class="btn-raised text-3xs-medium" style="width: 141px;">Open</button>
+      </div>
+    </div>
+
+    <!-- Weekly reflection card -->
+    <div class="reflection-card">
+      <div class="reflection-card__overlay"></div>
+      <div class="reflection-card__text">
+        <p class="text-3xs-book" style="color: var(--color-slate-100);">Weekly reflection</p>
+        <p class="text-m-medium" style="color: var(--color-slate-0);">Your weekly raport is ready</p>
+      </div>
+      <button class="reflection-card__close" aria-label="Close">
+        <img src="https://www.figma.com/api/mcp/asset/e2f3ec08-3b9a-47fd-a6fa-5babbce6b352" alt="Close" />
+      </button>
+      <div class="reflection-card__action">
+        <button class="btn-raised text-3xs-medium" style="width: 100%;" onclick="window.location.href='weekly-review.html'">Open</button>
+      </div>
+    </div>
+
+    <!-- Next sleep card -->
+    <div class="next-sleep-card">
+      <span class="text-3xs-book" style="color: var(--color-slate-300);">Next sleep</span>
+      <span class="text-m-medium" style="color: var(--color-slate-0);">Nap in 3h 32 min</span>
+    </div>
+
+    <!-- Today's sleep score -->
+    <div class="sleep-score-section">
+      <span class="text-3xs-book" style="color: var(--color-slate-300);">Today's sleep score</span>
+
+      <div class="score-card">
+        <p class="text-m-medium" style="color: var(--color-slate-0);">Good Sleep</p>
+        <p class="text-3xs-book" style="color: var(--color-slate-300);">Sleep patterns are very good!</p>
+        <p class="text-3xs-book score-card__percent" style="color: var(--color-slate-300);">87%</p>
+      </div>
+
+      <div class="stat-row">
+        <span class="text-3xs-medium stat-row__label">Bedtime</span>
+        <div class="stat-row__right">
+          <span class="text-3xs-medium">7:14 PM</span>
+          <span class="text-4xs-book stat-row__sub">Earlier than usual</span>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <span class="text-3xs-medium stat-row__label">Wake up</span>
+        <div class="stat-row__right">
+          <span class="text-3xs-medium">7:17 AM</span>
+          <span class="text-4xs-book stat-row__sub">Later than usual</span>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <span class="text-3xs-medium stat-row__label">Average wake window</span>
+        <div class="stat-row__right">
+          <span class="text-3xs-medium">4h 12min</span>
+          <span class="text-4xs-book stat-row__sub">More than usual</span>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <span class="text-3xs-medium stat-row__label">Average naps duration</span>
+        <div class="stat-row__right">
+          <span class="text-3xs-medium">1h 32min</span>
+          <span class="text-4xs-book stat-row__sub">Less than usual</span>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <span class="text-3xs-medium stat-row__label">3-day consistency</span>
+        <span class="text-3xs-medium">83%</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom tab bar -->
+  <div class="tab-bar">
+    <div class="tab-bar-inner">
+      <div class="tab-item tab-item--active">
+        <img class="tab-icon" src="images/home.svg" alt="Today" />
+        <span class="tab-label">Today</span>
+      </div>
+      <div class="tab-item">
+        <img class="tab-icon" src="images/moon.svg" alt="Schedule" />
+        <span class="tab-label">Schedule</span>
+      </div>
+      <div class="tab-item">
+        <img class="tab-icon" src="images/learn.svg" alt="Learn" />
+        <span class="tab-label">Learn</span>
+      </div>
+      <div class="tab-item">
+        <img class="tab-icon" src="images/user.svg" alt="Profile" />
+        <span class="tab-label">Profile</span>
+      </div>
+    </div>
+    <div class="tab-bar-pill-wrap">
+      <div class="tab-bar-pill"></div>
+    </div>
+  </div>
+
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
